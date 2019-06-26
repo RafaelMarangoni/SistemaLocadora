@@ -35,3 +35,24 @@ Route::get('ator',"atorController@index");
 
 Route::get('ator/cadastro',"atorController@create");
 Route::post('ator/cadastro',"atorController@create");
+
+Route::get('ator/editar/{id}',"atorController@editar");
+Route::post('ator/editar/{id}',"atorController@editar");
+
+Route::get('filme',"filmeController@index");
+Route::post('filme',"filmeController@index");
+
+Route::get('filme/editar/{id}',"filmeController@editar");
+Route::post('filme/editar/{id}',"filmeController@editar");
+
+Route::get('filme/delete/{id}',"filmeController@deletar");
+Route::post('filme/delete/{id}',"filmeController@deletar");
+
+Route::get('categoria',"categoriaController@index");
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+

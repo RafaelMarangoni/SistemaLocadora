@@ -1,13 +1,13 @@
-<?php
-
-namespace App;
+<?php namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Filme extends Model
-{
-   private $table = "filme"; 
-   private $primarykey = "filme_id";
+
+
+class Filme extends Model {
+    protected $table="filme";
+    protected $primaryKey="filme_id";
+    public $timestamps=false;
+
+    
 }
-
-

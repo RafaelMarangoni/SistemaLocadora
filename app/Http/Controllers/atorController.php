@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Ator;
 
+
 class atorController extends Controller
 {
     //
@@ -30,5 +31,19 @@ class atorController extends Controller
 
        
         return view('cadastroAtor',["resultado"=>$resultado]);
+    }
+
+    public function editar(Request $request, $id){
+        if($request->isMethod('GET')){
+            $ator = Ator::find($id);
+            return view('editarAtor',["ator"=>$ator]);
+        }   
+
+        $ator = Ator::find($request->ator_id);
+        $ator->primeiro_nome= $request->primeiroNome;
+        $ator->ultimo_nome = $request->segundoNome;
+        $resultado = $ator->save();
+
+        return view("editarAtor",["resultado"=>$resultado, "ator"=>$ator]);
     }
 }
