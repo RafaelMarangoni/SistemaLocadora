@@ -31,7 +31,7 @@ Route::get('/vendas', function(){
 
 Route::get('compras',"comprasController@index");
 
-Route::get('ator',"atorController@index");
+Route::get('ator',"atorController@index")->middleware('checkadmin');
 
 Route::get('ator/cadastro',"atorController@create");
 Route::post('ator/cadastro',"atorController@create");
