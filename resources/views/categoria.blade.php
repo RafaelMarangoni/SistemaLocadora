@@ -3,7 +3,7 @@
 @section ('container')
 
 <h1>Teste das categorias</h1>
-<ul>
+<ul>e
 
     @foreach($todasCategorias as $categoria)
     <li>{{$categoria->nome}}</li>

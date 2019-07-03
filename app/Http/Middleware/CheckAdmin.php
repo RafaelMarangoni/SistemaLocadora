@@ -20,7 +20,6 @@ class CheckAdmin
                 return route('/');
             }
             
-
         return $next($request);
     }
 }
